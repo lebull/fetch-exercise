@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { Items } from './Items'
+import { Header } from "./Layout/Header"
 
 function App() {
 
@@ -8,13 +9,9 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        Fetch Rewards coding exercise
-      </header>
+      <Header />
       { !mock ? <button onClick={() => setMock(!mock)}>Use Mock Data</button> : "" }
-      <div>
-        <Items mock={mock} />
-      </div>
+      <Items mock={mock} />
     </div>
   );
 }
