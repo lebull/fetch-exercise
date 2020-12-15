@@ -12,5 +12,15 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
-    min-width: 120pt;
+    width: 180px;
+
+    h2 {
+        font-size: 24pt;
+        font-weight: 500;
+    }
+}
+
+.Item {
+    font-size: 18pt;
+    font-weight: 400;
 }

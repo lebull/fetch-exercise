@@ -1,13 +1,29 @@
 .App-header{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    
-    font-size: 48pt;
-    
+
     background-color:hsla(242, 14%, 29%, 1);
     color:darken( rgba(255, 255, 255, 1), 5 );
     padding: 0.5em;
-    font-weight: 100;
+    padding: 2em;
+    
+    h1, h2 {
+        text-align: center;
+        font-weight: 100;
+        line-height: 1.15;
+        margin: 18pt;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 48pt;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 24pt;
+    }
+
 }
