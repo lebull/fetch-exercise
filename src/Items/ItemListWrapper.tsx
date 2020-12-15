@@ -3,6 +3,7 @@ import { ItemGroupType } from "../data/types";
 import { getItemGroups } from "../data/api";
 import { ItemGroupList } from "./Items";
 import { Alert } from "../Common/Alert/Alert";
+import { Spinner } from "../Common/Spinner/Spinner";
 import "./ItemListWrapper.scss";
 
 /**
@@ -38,7 +39,7 @@ export const ItemListWrapper = () => {
     }, [mock])
 
     if (state.loading) {
-        return <div className="itemListWrapper">Loading...</div>
+        return <div className="itemListWrapper"><Spinner /></div>
     }
 
     if (state.error) {

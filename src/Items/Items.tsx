@@ -1,5 +1,8 @@
 import { ItemType, ItemGroupType } from "../data/types";
 
+import "./Items.scss";
+
+
 
 /**
  * Displays a list of item groups.

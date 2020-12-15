@@ -1,6 +1,10 @@
 .ItemGroupList {
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 .ItemGroup{
@@ -8,4 +12,5 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: center;
+    min-width: 120pt;
 }
