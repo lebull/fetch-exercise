@@ -17,6 +17,8 @@ $theme-danger: rgb(255, 0, 0);
 
     font-size: 14pt;
 
+    color: rgba(0, 0, 0, 0.75);
+
     &-danger{
         border-color: $theme-danger;
         background-color: transparentize($theme-danger, 0.9);
