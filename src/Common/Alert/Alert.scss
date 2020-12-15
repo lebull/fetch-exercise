@@ -26,4 +26,13 @@ $theme-danger: rgb(255, 0, 0);
         border-color: $theme-danger;
         background-color: transparentize($theme-danger, 0.9);
     }
+
+    button {
+        font-size: 18pt;
+        border-style: solid;
+        padding: 0.25em 0.5em;
+        border-width: 1px;
+        cursor: pointer;
+        border-color: rgba(0, 0, 0, 0.2);
+    }
 }

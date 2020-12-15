@@ -7,7 +7,6 @@ import "./Items.scss";
 
 /**
  * Fetches items and displays an ItemGroupList.
- * 
  */
 
 export const ItemListWrapper = () => {
@@ -44,18 +43,17 @@ export const ItemListWrapper = () => {
 
     if (state.error) {
         return <Alert type="danger">
-            <p>There was a problem fetching items.</p>
-
             {!mock ? 
                 <div>
                     <p>
                         As of 12/15/2020, the S3 bucket for this exercise is not configured to respond with CORS requests.  It may work properly once this is configured correctly 
                         (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html</a>).
-                        In the meanwhile, you can still see the application's output created from mock data served from the application itself.
+                        In the meantime, you can still see the application output the same mock data served from the application itself.
                     </p>
                     <button onClick={() => setMock(!mock)}>Use Mock Data</button>
                 </div>
-                : ""
+                : 
+                <p>There was a problem fetching items.</p>
             }
         </Alert>
     }
