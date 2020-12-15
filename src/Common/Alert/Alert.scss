@@ -1,7 +1,7 @@
 $theme-danger: rgb(255, 0, 0);
 
 
-.Alert{
+.alert{
 
     flex-direction: column;
     display: flex;
@@ -14,6 +14,8 @@ $theme-danger: rgb(255, 0, 0);
     max-width: 600px;
     margin: 20px;
     padding: 2em;
+
+    font-size: 14pt;
 
     &-danger{
         border-color: $theme-danger;

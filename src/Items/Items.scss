@@ -1,4 +1,4 @@
-.ItemGroupList {
+.itemGroupList {
     display: flex;
     flex-direction: row;
 
@@ -7,7 +7,7 @@
     }
 }
 
-.ItemGroup{
+.itemGroup{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -20,7 +20,7 @@
     }
 }
 
-.Item {
+.item {
     font-size: 18pt;
     font-weight: 400;
 }
