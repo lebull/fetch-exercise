@@ -1,0 +1,29 @@
+$theme-danger: rgb(255, 0, 0);
+
+.Alert-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Alert{
+
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 1px black;
+    text-align: center;
+    
+    max-width: 600px;
+    margin: 20px;
+    padding: 2em;
+
+    &-danger{
+        border-color: $theme-danger;
+        background-color: transparentize($theme-danger, 0.9);
+    }
+}

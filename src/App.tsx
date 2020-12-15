@@ -1,17 +1,13 @@
-import { useState } from 'react';
 import './App.css';
 import { Items } from './Items'
 import { Header } from "./Layout"
 
 function App() {
 
-  const [mock, setMock] = useState(true);
-
   return (
     <div className="App">
       <Header />
-      { !mock ? <button onClick={() => setMock(!mock)}>Use Mock Data</button> : "" }
-      <Items mock={mock} />
+      <Items />
     </div>
   );
 }
