@@ -8,7 +8,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe("ItemListWrapper", () => {
     test('Renders', () => {
-        const wrapper = shallow(<ItemListWrapper />);
+        const wrapper = shallow(<ItemListWrapper mock={true}/>);
         expect(wrapper).toBeTruthy();
     })
 })
