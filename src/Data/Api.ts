@@ -1,5 +1,5 @@
 import Axios, { AxiosResponse } from "axios";
-import { ItemType, ItemGroupType } from "./Types";
+import { ItemType, ItemGroupType } from "./types";
 import { mockData } from "./mockData";
 
 export const data_url = `https://fetch-hiring.s3.amazonaws.com/hiring.json`;

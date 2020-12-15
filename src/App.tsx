@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { ItemType, ItemGroupType } from "./Data/Types";
-import { getItemGroups } from "./Data/Api";
+import { ItemType, ItemGroupType } from "./data/types";
+import { getItemGroups } from "./data/api";
 
 function App() {
   return (
