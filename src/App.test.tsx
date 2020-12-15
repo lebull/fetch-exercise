@@ -1,9 +1,13 @@
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 import App from './App';
+import { Items } from "./Items";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Fetch coding exercise/i);
-  expect(linkElement).toBeInTheDocument();
+Enzyme.configure({ adapter: new Adapter() });
+
+test('Renders the app wrapper', () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper.find(Items)).toHaveLength(1);
 });
+
