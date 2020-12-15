@@ -28,4 +28,4 @@ export const ItemGroup = ({ itemGroup }: ItemGroupProps) => {
 interface ItemProps {
     item: ItemType
 }
-const Item = ({ item }: ItemProps) => <div>{item.name}</div>
+export const Item = ({ item }: ItemProps) => <div>{item.name}</div>
