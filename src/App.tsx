@@ -1,26 +1,73 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import { ItemType, ItemGroupType } from "./Data/Types";
+import { getItemGroups } from "./Data/Api";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Fetch coding exercise
       </header>
+      <div>
+        <ItemList />
+      </div>
     </div>
   );
 }
+
+const ItemList = () => {
+  const [state, setstate] = useState({
+    loading: true,
+    error: null,
+    itemGroups: [] as ItemGroupType[],
+  });
+
+  useEffect(() => {
+    getItemGroups().then(itemGroups => {
+      setstate({
+        loading: false,
+        error: null,
+        itemGroups: itemGroups,
+      })
+    }).catch(error => {
+      setstate({
+        loading: false,
+        error: error,
+        itemGroups: []
+      })
+    })
+  }, [])
+
+  if(state.loading){
+    return <div>Loading...</div>
+  }
+
+  if(state.error){
+    return <div>There was a problem fetching items.</div>
+  }
+
+  if(state.itemGroups.length <= 0){
+    return <div>No items found</div>
+  }
+
+  return <div>
+    {state.itemGroups.map(itemGroup => <ItemGroup key={itemGroup.id} itemGroup={itemGroup} />)}
+  </div>
+}
+
+interface ItemGroupProps {
+  itemGroup: ItemGroupType
+}
+const ItemGroup = ({itemGroup}: ItemGroupProps) => 
+  <div>
+    {  itemGroup.items.map((item) => <Item key={item.id} item={item}/>)}
+  </div>
+
+
+interface ItemProps {
+  item: ItemType
+}
+const Item = ({item}: ItemProps) => <div>{item.name}</div>
 
 export default App;
