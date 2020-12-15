@@ -24,7 +24,7 @@ const ItemList = () => {
   });
 
   useEffect(() => {
-    getItemGroups().then(itemGroups => {
+    getItemGroups(true).then(itemGroups => {
       setstate({
         loading: false,
         error: null,
@@ -63,7 +63,6 @@ const ItemGroup = ({itemGroup}: ItemGroupProps) =>
   <div>
     {  itemGroup.items.map((item) => <Item key={item.id} item={item}/>)}
   </div>
-
 
 interface ItemProps {
   item: ItemType
