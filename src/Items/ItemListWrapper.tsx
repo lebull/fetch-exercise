@@ -3,7 +3,7 @@ import { ItemGroupType } from "../data/types";
 import { getItemGroups } from "../data/api";
 import { ItemGroupList } from "./Items";
 
-export const ItemGroupListWrapper = () => {
+export const ItemListWrapper = () => {
     const [state, setstate] = useState({
         loading: true,
         error: null,
