@@ -3,5 +3,5 @@ import "./Header.scss";
 
 
 export const Header = () => <header className="App-header">
-    Fetch Rewards Coding Cxercise
+    Fetch Rewards Coding Exercise
 </header>
