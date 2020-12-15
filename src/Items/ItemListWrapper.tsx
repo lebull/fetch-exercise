@@ -4,7 +4,15 @@ import { getItemGroups } from "../data/api";
 import { ItemGroupList } from "./Items";
 import "./Items.scss";
 
-export const ItemListWrapper = () => {
+/**
+ * Fetches items and displays an ItemGroupList.
+ * 
+ * @param mock : boolean - If true, the data pulled will be from the mock datasource
+ */
+interface ItemListWrapperProps {
+    mock: boolean
+}
+export const ItemListWrapper = ({ mock } : ItemListWrapperProps) => {
     const [state, setstate] = useState({
         loading: true,
         error: null,
@@ -12,7 +20,7 @@ export const ItemListWrapper = () => {
     });
 
     useEffect(() => {
-        getItemGroups(true).then(itemGroups => {
+        getItemGroups(mock).then(itemGroups => {
             setstate({
                 loading: false,
                 error: null,
@@ -25,7 +33,7 @@ export const ItemListWrapper = () => {
                 itemGroups: []
             })
         })
-    }, [])
+    }, [mock])
 
     if (state.loading) {
         return <div>Loading...</div>

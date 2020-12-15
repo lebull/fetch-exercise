@@ -1,5 +1,9 @@
 import { ItemType, ItemGroupType } from "../data/types";
 
+
+/**
+ * Displays a list of item groups.
+ */
 interface ItemGroupListProps {
     itemGroups: ItemGroupType[]
 }
@@ -11,6 +15,9 @@ export const ItemGroupList = ({itemGroups}: ItemGroupListProps) => {
     </div>
 }
 
+/**
+ * Displays an item group.
+ */
 interface ItemGroupProps {
     itemGroup: ItemGroupType
 }
@@ -23,6 +30,9 @@ export const ItemGroup = ({ itemGroup }: ItemGroupProps) => {
     </div>)
 }
 
+/**
+ * Displays an item.
+ */
 interface ItemProps {
     item: ItemType
 }
