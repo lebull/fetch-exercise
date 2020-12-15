@@ -48,7 +48,7 @@ export const ItemListWrapper = () => {
                 {!mock ?
                     <div>
                         <p>As of 12/15/2020, the S3 bucket for this exercise is not configured to respond with CORS requests.  It may work properly once this is configured correctly.</p>
-                        <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html</a>
+                        <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">Cross-origin resource sharing (CORS)</a>
                         <p>In the meantime, you can still see the application output the same mock data served from the application itself.</p>
                         <button onClick={() => setMock(!mock)}>Use Mock Data</button>
                     </div>

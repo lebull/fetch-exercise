@@ -17,13 +17,21 @@
     }
 
     h1 {
-        margin: 0;
+        margin: 12pt;
         font-size: 48pt;
+        @media (max-width: 768px) {
+            font-size: 36pt;
+        }
+
     }
 
     h2 {
-        margin: 0;
+        margin: 12pt;
         font-size: 24pt;
+        @media (max-width: 768px) {
+            font-size: 22pt;
+        }
+        
     }
 
 }
