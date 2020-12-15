@@ -1,5 +1,5 @@
 import './App.css';
-import { ItemList } from './components/Items'
+import { ItemGroupListWrapper } from './components/ItemListWrapper'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         Fetch coding exercise
       </header>
       <div>
-        <ItemList />
+        <ItemGroupListWrapper />
       </div>
     </div>
   );
