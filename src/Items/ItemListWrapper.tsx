@@ -3,7 +3,7 @@ import { ItemGroupType } from "../data/types";
 import { getItemGroups } from "../data/api";
 import { ItemGroupList } from "./Items";
 import { Alert } from "../Common/Alert/Alert";
-import "./Items.scss";
+import "./ItemListWrapper.scss";
 
 /**
  * Fetches items and displays an ItemGroupList.
@@ -38,31 +38,31 @@ export const ItemListWrapper = () => {
     }, [mock])
 
     if (state.loading) {
-        return <div>Loading...</div>
+        return <div className="itemListWrapper">Loading...</div>
     }
 
     if (state.error) {
-        return <Alert type="danger">
-            {!mock ? 
-                <div>
-                    <p>
-                        As of 12/15/2020, the S3 bucket for this exercise is not configured to respond with CORS requests.  It may work properly once this is configured correctly 
-                        (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html</a>).
-                        In the meantime, you can still see the application output the same mock data served from the application itself.
-                    </p>
-                    <button onClick={() => setMock(!mock)}>Use Mock Data</button>
-                </div>
-                : 
-                <p>There was a problem fetching items.</p>
-            }
-        </Alert>
+        return <div className="itemListWrapper">
+            <Alert type="danger">
+                {!mock ?
+                    <div>
+                        <p>As of 12/15/2020, the S3 bucket for this exercise is not configured to respond with CORS requests.  It may work properly once this is configured correctly.</p>
+                        <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html">https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html</a>
+                        <p>In the meantime, you can still see the application output the same mock data served from the application itself.</p>
+                        <button onClick={() => setMock(!mock)}>Use Mock Data</button>
+                    </div>
+                    :
+                    <p>There was a problem fetching items.</p>
+                }
+            </Alert>
+        </div>
     }
 
     if (state.itemGroups.length <= 0) {
-        return <div>No items found</div>
+        return <div className="itemListWrapper">No items found</div>
     }
 
-    return <div>
+    return <div className="itemListWrapper">
         <ItemGroupList itemGroups={state.itemGroups} />
     </div>
 }

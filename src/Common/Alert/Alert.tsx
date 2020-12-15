@@ -9,9 +9,7 @@ interface AlertProps {
 }
 
 export const Alert = ({ type, children }: AlertProps) => {
-    return <div className="Alert-wrapper">
-        <div className={`Alert Alert-${type}`}>
-            {children}
-        </div>
+    return <div className={`Alert Alert-${type}`}>
+        {children}
     </div>
 }
