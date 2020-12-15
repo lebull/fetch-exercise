@@ -1,5 +1,5 @@
 import './App.css';
-import { ItemListWrapper } from './Items'
+import { Items } from './Items'
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         Fetch coding exercise
       </header>
       <div>
-        <ItemListWrapper />
+        <Items />
       </div>
     </div>
   );

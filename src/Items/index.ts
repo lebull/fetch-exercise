@@ -1,3 +1,3 @@
 import { ItemListWrapper } from "./ItemListWrapper";
 
-export { ItemListWrapper };
+export { ItemListWrapper as Items };
