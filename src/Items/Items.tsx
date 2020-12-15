@@ -1,6 +1,5 @@
 import { ItemType, ItemGroupType } from "../data/types";
 
-
 interface ItemGroupListProps {
     itemGroups: ItemGroupType[]
 }
@@ -23,7 +22,6 @@ export const ItemGroup = ({ itemGroup }: ItemGroupProps) => {
         {  itemGroup.items.sort(sortItems).map((item) => <Item key={item.id} item={item} />)}
     </div>)
 }
-
 
 interface ItemProps {
     item: ItemType
