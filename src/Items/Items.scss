@@ -1,0 +1,26 @@
+.itemGroupList {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.itemGroup{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    width: 180px;
+
+    h2 {
+        font-size: 20pt;
+        font-weight: 500;
+    }
+}
+
+.item {
+    font-size: 14pt;
+    font-weight: 400;
+}
